@@ -1,0 +1,83 @@
+import random
+L=["pedra","papel", "tesoura", "lagarto", "spock"]
+userplacar=0
+complacar=0
+while userplacar<3 and complacar<3:
+          
+    userchoice= input("pedra,papel,tesoura,lagarto,spock?:")
+    compchoice=random.choice(L)
+    print(compchoice,'!')
+    if userchoice=="pedra":
+         if compchoice=="papel" or compchoice == "spock":
+            print("voce perdeu essa!")
+            complacar+=1
+            userplacar=0
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+         elif compchoice=="pedra":
+            print("empatamos!")
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+         else:
+            print("voce ganhou essa!")
+            userplacar+=1
+            complacar=0
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+    if userchoice=="papel":
+         if compchoice=="tesoura"or compchoice=="lagarto":
+            print("voce perdeu essa!")
+            complacar+=1
+            userplacar=0
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+         elif compchoice=="papel":
+            print("empatamos!")
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+         else:
+            print("voce ganhou essa!")
+            userplacar+=1
+            complacar=0
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+    if userchoice=="tesoura":
+         if compchoice=="pedra" or compchoice== "spock":
+            print("voce perdeu essa!")
+            complacar+=1
+            userplacar=0
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+         elif compchoice=="tesoura":
+            print("empatamos!")
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+         else:
+            print("voce ganhou essa!")
+            userplacar+=1
+            complacar=0
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+    if userchoice=="lagarto":
+         if compchoice=="pedra" or compchoice== "tesoura":
+            print("voce perdeu essa!")
+            complacar+=1
+            userplacar=0
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+         elif compchoice=="lagarto":
+            print("empatamos!")
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+         else: 
+            print("voce ganhou essa!")
+            userplacar+=1
+            complacar=0
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+    if userchoice=="spock":
+         if compchoice=="lagarto" or compchoice== "papel":
+            print("voce perdeu essa!")
+            complacar+=1
+            userplacar=0
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+         elif compchoice=="spock":
+            print("empatamos!")
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+         else:
+            print("voce ganhou essa!")
+            userplacar+=1
+            complacar=0
+            print("placar:","computador",complacar,"vs","usuario", userplacar)
+if userplacar==3:
+    print("voce ganhou")
+if complacar==3:
+    print("voce perdeu")      
